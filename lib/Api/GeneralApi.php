@@ -176,7 +176,7 @@ class GeneralApi
 
             $statusCode = $response->getStatusCode();
 
-            if ($statusCode < 200 || $statusCode > 299) {
+            /*if ($statusCode < 200 || $statusCode > 299) {
                 throw new ApiException(
                     sprintf(
                         '[%d] Error connecting to the API (%s)',
@@ -187,7 +187,7 @@ class GeneralApi
                     $response->getHeaders(),
                     (string) $response->getBody()
                 );
-            }
+            }*/
 
             switch($statusCode) {
                 case 200:
@@ -298,6 +298,19 @@ class GeneralApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+            }
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
             }
 
             $returnType = '\kruegge82\DHL\Model\ServiceInformation';
