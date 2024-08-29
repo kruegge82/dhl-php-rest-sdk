@@ -10,10 +10,10 @@ Name | Type | Description | Notes
 **cost_center** | **string** | Textfield that appears on the shipment label. It cannot be used to search for the shipment. | [optional]
 **creation_software** | **string** | Is only to be indicated by DHL partners. | [optional]
 **ship_date** | **\DateTime** | Date the shipment is transferred to DHL. The shipment date can be the current date or a date up to a few days in the future. It must not be in the past. Iso format required: yyyy-mm-dd. On the shipment date the shipment will be automatically closed at your end of day closing time. | [optional]
-**shipper** | [**\OpenAPI\Client\Model\ShipmentShipper**](ShipmentShipper.md) |  | [optional]
-**consignee** | [**\OpenAPI\Client\Model\Consignee**](Consignee.md) |  | [optional]
-**details** | [**\OpenAPI\Client\Model\ShipmentDetails**](ShipmentDetails.md) |  | [optional]
-**services** | [**\OpenAPI\Client\Model\VAS**](VAS.md) |  | [optional]
-**customs** | [**\OpenAPI\Client\Model\CustomsDetails**](CustomsDetails.md) |  | [optional]
+**shipper** | [**\kruegge82\DHL\Model\ShipmentShipper**](ShipmentShipper.md) |  | [optional]
+**consignee** | [**\kruegge82\DHL\Model\Consignee**](Consignee.md) |  | [optional]
+**details** | [**\kruegge82\DHL\Model\ShipmentDetails**](ShipmentDetails.md) |  | [optional]
+**services** | [**\kruegge82\DHL\Model\VAS**](VAS.md) |  | [optional]
+**customs** | [**\kruegge82\DHL\Model\CustomsDetails**](CustomsDetails.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

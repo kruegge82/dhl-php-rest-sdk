@@ -1,4 +1,4 @@
-# OpenAPI\Client\GeneralApi
+# kruegge82\DHL\GeneralApi
 
 All URIs are relative to https://api-eu.dhl.com/parcel/de/shipping/v2, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api-eu.dhl.com/parcel/de/shipping/v2, except if
 ## `rootGet()`
 
 ```php
-rootGet(): \OpenAPI\Client\Model\ServiceInformation
+rootGet(): \kruegge82\DHL\Model\ServiceInformation
 ```
 
 Return API version
@@ -25,10 +25,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\GeneralApi(
+$apiInstance = new kruegge82\DHL\Api\GeneralApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(['http_errors'=>false])
 );
 
 try {
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceInformation**](../Model/ServiceInformation.md)
+[**\kruegge82\DHL\Model\ServiceInformation**](../Model/ServiceInformation.md)
 
 ### Authorization
 

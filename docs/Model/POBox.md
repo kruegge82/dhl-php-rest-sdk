@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **po_box_id** | **int** | Number of P.O. Box (Postfach) |
 **email** | **string** | Email address of the consignee | [optional]
 **city** | **string** | City of the P.O. Box (Postfach) location |
-**country** | [**\OpenAPI\Client\Model\Country**](Country.md) |  | [optional]
+**country** | [**\kruegge82\DHL\Model\Country**](Country.md) |  | [optional]
 **postal_code** | **string** | Postal code of the P.O. Box (Postfach) location |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

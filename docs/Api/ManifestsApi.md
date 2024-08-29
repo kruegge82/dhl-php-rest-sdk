@@ -1,4 +1,4 @@
-# OpenAPI\Client\ManifestsApi
+# kruegge82\DHL\ManifestsApi
 
 All URIs are relative to https://api-eu.dhl.com/parcel/de/shipping/v2, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api-eu.dhl.com/parcel/de/shipping/v2, except if
 ## `getManifests()`
 
 ```php
-getManifests($billing_number, $date, $include_docs, $accept_language): \OpenAPI\Client\Model\SingleManifestResponse
+getManifests($billing_number, $date, $include_docs, $accept_language): \kruegge82\DHL\Model\SingleManifestResponse
 ```
 
 Retrieve daily manifest document
@@ -26,20 +26,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('dhl-api-key', 'Bearer');
+// $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKeyPrefix('dhl-api-key', 'Bearer');
 
 // Configure HTTP basic authorization: BasicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new OpenAPI\Client\Api\ManifestsApi(
+$apiInstance = new kruegge82\DHL\Api\ManifestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
+    new GuzzleHttp\Client(['http_errors'=>false]),
     $config
 );
 $billing_number = 'billing_number_example'; // string | Customer billingNumber number.
@@ -66,7 +66,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SingleManifestResponse**](../Model/SingleManifestResponse.md)
+[**\kruegge82\DHL\Model\SingleManifestResponse**](../Model/SingleManifestResponse.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ try {
 ## `manifestsPost()`
 
 ```php
-manifestsPost($shipment_manifesting_request, $accept_language, $all): \OpenAPI\Client\Model\MultipleManifestResponse
+manifestsPost($shipment_manifesting_request, $accept_language, $all): \kruegge82\DHL\Model\MultipleManifestResponse
 ```
 
 Mark shipments as being ready for shipping
@@ -99,23 +99,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('dhl-api-key', 'Bearer');
+// $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKeyPrefix('dhl-api-key', 'Bearer');
 
 // Configure HTTP basic authorization: BasicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new OpenAPI\Client\Api\ManifestsApi(
+$apiInstance = new kruegge82\DHL\Api\ManifestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
+    new GuzzleHttp\Client(['http_errors'=>false]),
     $config
 );
-$shipment_manifesting_request = new \OpenAPI\Client\Model\ShipmentManifestingRequest(); // \OpenAPI\Client\Model\ShipmentManifestingRequest | Manifest request taking multiple input elements
+$shipment_manifesting_request = new \kruegge82\DHL\Model\ShipmentManifestingRequest(); // \kruegge82\DHL\Model\ShipmentManifestingRequest | Manifest request taking multiple input elements
 $accept_language = de-DE; // string | Control the APIs response language via locale abbreviation. English (en-US) and german (de-DE) are supported. If not specified, the default is english.
 $all = false; // bool | Specify if all applicable shipments shall be marked as being ready for shipping.
 
@@ -131,13 +131,13 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **shipment_manifesting_request** | [**\OpenAPI\Client\Model\ShipmentManifestingRequest**](../Model/ShipmentManifestingRequest.md)| Manifest request taking multiple input elements | |
+| **shipment_manifesting_request** | [**\kruegge82\DHL\Model\ShipmentManifestingRequest**](../Model/ShipmentManifestingRequest.md)| Manifest request taking multiple input elements | |
 | **accept_language** | **string**| Control the APIs response language via locale abbreviation. English (en-US) and german (de-DE) are supported. If not specified, the default is english. | [optional] |
 | **all** | **bool**| Specify if all applicable shipments shall be marked as being ready for shipping. | [optional] [default to false] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MultipleManifestResponse**](../Model/MultipleManifestResponse.md)
+[**\kruegge82\DHL\Model\MultipleManifestResponse**](../Model/MultipleManifestResponse.md)
 
 ### Authorization
 

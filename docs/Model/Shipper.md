@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **address_house** | **string** | Line 1 of the street address. This is just the house number. Can be added to street name instead. | [optional]
 **postal_code** | **string** | Mandatory for all countries but Ireland that use a postal code system. | [optional]
 **city** | **string** | city |
-**country** | [**\OpenAPI\Client\Model\Country**](Country.md) |  |
+**country** | [**\kruegge82\DHL\Model\Country**](Country.md) |  |
 **contact_name** | **string** | optional contact name. (this is not the primary name printed on label) | [optional]
 **email** | **string** | Optional contact email address of the shipper | [optional]
 

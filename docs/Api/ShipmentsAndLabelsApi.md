@@ -1,4 +1,4 @@
-# OpenAPI\Client\ShipmentsAndLabelsApi
+# kruegge82\DHL\ShipmentsAndLabelsApi
 
 All URIs are relative to https://api-eu.dhl.com/parcel/de/shipping/v2, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api-eu.dhl.com/parcel/de/shipping/v2, except if
 ## `createOrders()`
 
 ```php
-createOrders($shipment_order_request, $accept_language, $validate, $must_encode, $include_docs, $doc_format, $print_format, $retoure_print_format, $combine): \OpenAPI\Client\Model\LabelDataResponse
+createOrders($shipment_order_request, $accept_language, $validate, $must_encode, $include_docs, $doc_format, $print_format, $retoure_print_format, $combine): \kruegge82\DHL\Model\LabelDataResponse
 ```
 
 Create one or more shipments and their documents. (This is the primary call of the API.)
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('dhl-api-key', 'Bearer');
+// $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKeyPrefix('dhl-api-key', 'Bearer');
 
 // Configure HTTP basic authorization: BasicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentsAndLabelsApi(
+$apiInstance = new kruegge82\DHL\Api\ShipmentsAndLabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
+    new GuzzleHttp\Client(['http_errors'=>false]),
     $config
 );
-$shipment_order_request = new \OpenAPI\Client\Model\ShipmentOrderRequest(); // \OpenAPI\Client\Model\ShipmentOrderRequest | Shipment order request.
+$shipment_order_request = new \kruegge82\DHL\Model\ShipmentOrderRequest(); // \kruegge82\DHL\Model\ShipmentOrderRequest | Shipment order request.
 $accept_language = de-DE; // string | Control the APIs response language via locale abbreviation. English (en-US) and german (de-DE) are supported. If not specified, the default is english.
 $validate = false; // bool | If provided and set to `true`, the input document will be:   * validated against JSON schema (/orders/ endpoint) at the API layer. In case of errors, HTTP 400 and details will be returned.   * validated against the DHL backend.   In that case, no state changes are happening, no data is stored, shipments neither deleted nor created, no labels being returned. The call will return a status (200, 400) for each shipment element.
 $must_encode = false; // bool | Legacy name **printOnlyIfCodable**. If set to *true*, labels will only be created if an address is encodable. This is only relevant for German consignee addresses. If set to false or left out, addresses, that are not encodable will be printed even though you receive a warning.
@@ -66,7 +66,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **shipment_order_request** | [**\OpenAPI\Client\Model\ShipmentOrderRequest**](../Model/ShipmentOrderRequest.md)| Shipment order request. | |
+| **shipment_order_request** | [**\kruegge82\DHL\Model\ShipmentOrderRequest**](../Model/ShipmentOrderRequest.md)| Shipment order request. | |
 | **accept_language** | **string**| Control the APIs response language via locale abbreviation. English (en-US) and german (de-DE) are supported. If not specified, the default is english. | [optional] |
 | **validate** | **bool**| If provided and set to &#x60;true&#x60;, the input document will be:   * validated against JSON schema (/orders/ endpoint) at the API layer. In case of errors, HTTP 400 and details will be returned.   * validated against the DHL backend.   In that case, no state changes are happening, no data is stored, shipments neither deleted nor created, no labels being returned. The call will return a status (200, 400) for each shipment element. | [optional] [default to false] |
 | **must_encode** | **bool**| Legacy name **printOnlyIfCodable**. If set to *true*, labels will only be created if an address is encodable. This is only relevant for German consignee addresses. If set to false or left out, addresses, that are not encodable will be printed even though you receive a warning. | [optional] [default to false] |
@@ -78,7 +78,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LabelDataResponse**](../Model/LabelDataResponse.md)
+[**\kruegge82\DHL\Model\LabelDataResponse**](../Model/LabelDataResponse.md)
 
 ### Authorization
 
@@ -96,7 +96,7 @@ try {
 ## `getLabel()`
 
 ```php
-getLabel($token): \OpenAPI\Client\Model\LabelDataResponse
+getLabel($token): \kruegge82\DHL\Model\LabelDataResponse
 ```
 
 Download PDF document
@@ -111,10 +111,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentsAndLabelsApi(
+$apiInstance = new kruegge82\DHL\Api\ShipmentsAndLabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(['http_errors'=>false])
 );
 $token = 'token_example'; // string | Identifies PDF document and requested print settings for download.
 
@@ -134,7 +134,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LabelDataResponse**](../Model/LabelDataResponse.md)
+[**\kruegge82\DHL\Model\LabelDataResponse**](../Model/LabelDataResponse.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ No authorization required
 ## `getOrder()`
 
 ```php
-getOrder($shipment, $accept_language, $doc_format, $print_format, $retoure_print_format, $include_docs, $combine): \OpenAPI\Client\Model\LabelDataResponse
+getOrder($shipment, $accept_language, $doc_format, $print_format, $retoure_print_format, $include_docs, $combine): \kruegge82\DHL\Model\LabelDataResponse
 ```
 
 Retrieve shipment documents - labels and customs documents
@@ -167,20 +167,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('dhl-api-key', 'Bearer');
+// $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKeyPrefix('dhl-api-key', 'Bearer');
 
 // Configure HTTP basic authorization: BasicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentsAndLabelsApi(
+$apiInstance = new kruegge82\DHL\Api\ShipmentsAndLabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
+    new GuzzleHttp\Client(['http_errors'=>false]),
     $config
 );
 $shipment = array('shipment_example'); // string[] | This parameter identifies shipments. The parameter can be used multiple times in one request to get the labels and/or documents for up to 30 shipments maximum. Only documents and label for shipments that are not yet closed can be retrieved.
@@ -213,7 +213,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LabelDataResponse**](../Model/LabelDataResponse.md)
+[**\kruegge82\DHL\Model\LabelDataResponse**](../Model/LabelDataResponse.md)
 
 ### Authorization
 
@@ -231,7 +231,7 @@ try {
 ## `ordersAccountDelete()`
 
 ```php
-ordersAccountDelete($profile, $shipment, $accept_language): \OpenAPI\Client\Model\LabelDataResponse
+ordersAccountDelete($profile, $shipment, $accept_language): \kruegge82\DHL\Model\LabelDataResponse
 ```
 
 Delete one or more shipments
@@ -246,20 +246,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('dhl-api-key', 'Bearer');
+// $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKeyPrefix('dhl-api-key', 'Bearer');
 
 // Configure HTTP basic authorization: BasicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentsAndLabelsApi(
+$apiInstance = new kruegge82\DHL\Api\ShipmentsAndLabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
+    new GuzzleHttp\Client(['http_errors'=>false]),
     $config
 );
 $profile = STANDARD_GRUPPENPROFIL; // string | Defines the user group profile. A user group is permitted to specific billing numbers. Shipments are only canceled if they belong to a billing number that the user group profile is entitled to use. This attribute is mandatory. Please use the standard user group profile 'STANDARD_GRUPPENPROFIL' if no dedicated user group profile is available.
@@ -284,7 +284,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LabelDataResponse**](../Model/LabelDataResponse.md)
+[**\kruegge82\DHL\Model\LabelDataResponse**](../Model/LabelDataResponse.md)
 
 ### Authorization
 
