@@ -27,6 +27,9 @@ This request is used to create one or more shipments and return corresponding sh
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure OAuth2 access token for authorization: OAuth2
+//$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 // Configure API key authorization: ApiKey
 $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -82,7 +85,7 @@ try {
 
 ### Authorization
 
-[ApiKey](../../README.md#ApiKey), [BasicAuth](../../README.md#BasicAuth)
+[OAuth2](../../README.md#OAuth2), [ApiKey](../../README.md#ApiKey), [BasicAuth](../../README.md#BasicAuth)
 
 ### HTTP request headers
 
@@ -109,6 +112,19 @@ Public download URL for shipment labels and documents. The URL is provided in th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
+// Configure OAuth2 access token for authorization: OAuth2
+//$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+// Configure API key authorization: ApiKey
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKeyPrefix('dhl-api-key', 'Bearer');
+
+// Configure HTTP basic authorization: BasicAuth
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new kruegge82\DHL\Api\ShipmentsAndLabelsApi(
@@ -138,7 +154,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[OAuth2](../../README.md#OAuth2), [ApiKey](../../README.md#ApiKey), [BasicAuth](../../README.md#BasicAuth)
 
 ### HTTP request headers
 
@@ -165,6 +181,9 @@ Returns documents for existing shipment(s). The call accepts multiple shipment n
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
+// Configure OAuth2 access token for authorization: OAuth2
+//$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure API key authorization: ApiKey
 $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
@@ -217,7 +236,7 @@ try {
 
 ### Authorization
 
-[ApiKey](../../README.md#ApiKey), [BasicAuth](../../README.md#BasicAuth)
+[OAuth2](../../README.md#OAuth2), [ApiKey](../../README.md#ApiKey), [BasicAuth](../../README.md#BasicAuth)
 
 ### HTTP request headers
 
@@ -244,6 +263,9 @@ Delete one or more shipments created earlier. Deletion of shipments is only poss
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
+// Configure OAuth2 access token for authorization: OAuth2
+//$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure API key authorization: ApiKey
 $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
@@ -288,7 +310,7 @@ try {
 
 ### Authorization
 
-[ApiKey](../../README.md#ApiKey), [BasicAuth](../../README.md#BasicAuth)
+[OAuth2](../../README.md#OAuth2), [ApiKey](../../README.md#ApiKey), [BasicAuth](../../README.md#BasicAuth)
 
 ### HTTP request headers
 

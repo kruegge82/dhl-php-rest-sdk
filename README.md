@@ -1,4 +1,4 @@
-# DHL PHP REST SDK
+# OpenAPIClient-php
 
 Note: This is the specification of the DPDHL Group Parcel DE Shipping API for Post & Parcel Germany. This REST web service allows business customers to create shipping labels on demand.
 
@@ -131,6 +131,13 @@ Authentication schemes defined for the API:
 - **API key parameter name**: dhl-api-key
 - **Location**: HTTP header
 
+
+### OAuth2
+
+- **Type**: `OAuth`
+- **Flow**: `password`
+- **Authorization URL**: ``
+- **Scopes**: N/A
 
 ## Tests
 

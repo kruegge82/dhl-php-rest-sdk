@@ -25,6 +25,9 @@ Return the manifest document for the specific date (abbreviated ISO8601 format Y
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure OAuth2 access token for authorization: OAuth2
+//$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 // Configure API key authorization: ApiKey
 $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -70,7 +73,7 @@ try {
 
 ### Authorization
 
-[ApiKey](../../README.md#ApiKey), [BasicAuth](../../README.md#BasicAuth)
+[OAuth2](../../README.md#OAuth2), [ApiKey](../../README.md#ApiKey), [BasicAuth](../../README.md#BasicAuth)
 
 ### HTTP request headers
 
@@ -97,6 +100,9 @@ Shipments are normally ''closed out'' at a fixed time of the day (such as 6 pm, 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
+// Configure OAuth2 access token for authorization: OAuth2
+//$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure API key authorization: ApiKey
 $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
@@ -141,7 +147,7 @@ try {
 
 ### Authorization
 
-[ApiKey](../../README.md#ApiKey), [BasicAuth](../../README.md#BasicAuth)
+[OAuth2](../../README.md#OAuth2), [ApiKey](../../README.md#ApiKey), [BasicAuth](../../README.md#BasicAuth)
 
 ### HTTP request headers
 
