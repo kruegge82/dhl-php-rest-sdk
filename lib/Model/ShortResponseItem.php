@@ -249,7 +249,7 @@ class ShortResponseItem implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(array|null $data = null)
     {
         $this->setIfExists('shipment_no', $data ?? [], null);
         $this->setIfExists('sstatus', $data ?? [], null);
