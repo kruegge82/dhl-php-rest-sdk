@@ -28,7 +28,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-//$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure API key authorization: ApiKey
 $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
@@ -44,7 +44,7 @@ $config = kruegge82\DHL\Configuration::getDefaultConfiguration()
 $apiInstance = new kruegge82\DHL\Api\ShipmentsAndLabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(['http_errors'=>false]),
+    new GuzzleHttp\Client(),
     $config
 );
 $shipment_order_request = new \kruegge82\DHL\Model\ShipmentOrderRequest(); // \kruegge82\DHL\Model\ShipmentOrderRequest | Shipment order request.
@@ -114,7 +114,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-//$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure API key authorization: ApiKey
 $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
@@ -130,7 +130,7 @@ $config = kruegge82\DHL\Configuration::getDefaultConfiguration()
 $apiInstance = new kruegge82\DHL\Api\ShipmentsAndLabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(['http_errors'=>false]),
+    new GuzzleHttp\Client(),
     $config
 );
 $token = 'token_example'; // string | Identifies PDF document and requested print settings for download.
@@ -184,7 +184,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-//$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure API key authorization: ApiKey
 $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
@@ -200,7 +200,7 @@ $config = kruegge82\DHL\Configuration::getDefaultConfiguration()
 $apiInstance = new kruegge82\DHL\Api\ShipmentsAndLabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(['http_errors'=>false]),
+    new GuzzleHttp\Client(),
     $config
 );
 $shipment = array('shipment_example'); // string[] | This parameter identifies shipments. The parameter can be used multiple times in one request to get the labels and/or documents for up to 30 shipments maximum. Only documents and label for shipments that are not yet closed can be retrieved.
@@ -266,7 +266,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth2
-//$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure API key authorization: ApiKey
 $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
@@ -282,7 +282,7 @@ $config = kruegge82\DHL\Configuration::getDefaultConfiguration()
 $apiInstance = new kruegge82\DHL\Api\ShipmentsAndLabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(['http_errors'=>false]),
+    new GuzzleHttp\Client(),
     $config
 );
 $profile = STANDARD_GRUPPENPROFIL; // string | Defines the user group profile. A user group is permitted to specific billing numbers. Shipments are only canceled if they belong to a billing number that the user group profile is entitled to use. This attribute is mandatory. Please use the standard user group profile 'STANDARD_GRUPPENPROFIL' if no dedicated user group profile is available.
