@@ -7,11 +7,11 @@ Name | Type | Description | Notes
 **name1** | **string** | Name1. Line 1 of name information |
 **name2** | **string** | An optional, additional line of name information | [optional]
 **name3** | **string** | An optional, additional line of name information | [optional]
-**dispatching_information** | **string** | An optional, additional line of address. It&#39;s only usable for a few countries, e.g. Belgium. It is positioned below name3 on the label. | [optional]
+**dispatching_information** | **string** | An optional, additional line of address. It is printed on the shipping label for international shipments to the following countries only BEL, CZE, NLD. It is positioned below name3 on the label. | [optional]
 **address_street** | **string** | Line 1 of the street address. This is just the street name. Can also include house number. |
 **address_house** | **string** | Line 1 of the street address. This is just the house number. Can be added to street name instead. | [optional]
-**additional_address_information1** | **string** | Additional information that is positioned either behind or below addressStreet on the label. If it is printed and where exactly depends on the country. | [optional]
-**additional_address_information2** | **string** | Additional information that is positioned either behind or below addressStreet on the label. If it is printed and where exactly depends on the country. | [optional]
+**additional_address_information1** | **string** | Additional information that is positioned either behind or below addressStreet on international shipment labels. Where exactly it is printed on the label depends on the country. | [optional]
+**additional_address_information2** | **string** | Additional information that is positioned either behind or below addressStreet on international shipment labels. It is printed on shipping labels to the following countries only AUT, CHN, DNK, GBR, HRV, LTU, PRT, ROU, RUS. Where exactly it is printed on the label depends on the country. | [optional]
 **postal_code** | **string** | Mandatory for all countries but Ireland that use a postal code system. | [optional]
 **city** | **string** | city |
 **state** | **string** | State, province or territory. For the USA please use the official regional ISO-Codes, e.g. US-AL. | [optional]

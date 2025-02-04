@@ -130,7 +130,8 @@ $config = kruegge82\DHL\Configuration::getDefaultConfiguration()
 $apiInstance = new kruegge82\DHL\Api\ShipmentsAndLabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(['http_errors'=>false])
+    new GuzzleHttp\Client(['http_errors'=>false]),
+    $config
 );
 $token = 'token_example'; // string | Identifies PDF document and requested print settings for download.
 

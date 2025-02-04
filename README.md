@@ -8,8 +8,7 @@ Note: This is the specification of the DPDHL Group Parcel DE Shipping API for Po
 
 ### Requirements
 
-PHP 7.4 and later.
-Should also work with PHP 8.0.
+PHP 8.1 and later.
 
 ### Composer
 
@@ -120,16 +119,17 @@ Class | Method | HTTP request | Description
 
 ## Authorization
 
-Authentication schemes defined for the API:
 ### BasicAuth
 
 - **Type**: HTTP basic authentication
+
 
 ### ApiKey
 
 - **Type**: API key
 - **API key parameter name**: dhl-api-key
 - **Location**: HTTP header
+
 
 
 ### OAuth2
