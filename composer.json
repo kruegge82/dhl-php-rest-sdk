@@ -2,19 +2,20 @@
     "name": "kruegge82/dhl-php-rest-sdk",
     "description": "Note: This is the specification of the DPDHL Group Parcel DE Shipping API for Post & Parcel Germany. This REST web service allows business customers to create shipping labels on demand.",
     "keywords": [
-        "DHL",
-        "Warenpost",
-        "Label",
+        "openapitools",
+        "openapi-generator",
+        "openapi",
         "php",
         "sdk",
         "rest",
         "api"
     ],
     "homepage": "https://openapi-generator.tech",
-    "license": "MIT",
+    "license": "unlicense",
     "authors": [
         {
-            "name": "Jahn N."
+            "name": "OpenAPI",
+            "homepage": "https://openapi-generator.tech"
         }
     ],
     "require": {

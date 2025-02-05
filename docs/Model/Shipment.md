@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**product** | **string** | Determines the DHL Paket product to be used.  * V01PAK: DHL PAKET; * V53WPAK: DHL PAKET International; * V54EPAK: DHL Europaket; * V62WP: Warenpost; * V66WPI: Warenpost International | [optional]
+**product** | **string** | Determines the DHL Paket product to be used.  * V01PAK: DHL PAKET; * V53WPAK: DHL PAKET International; * V54EPAK: DHL Europaket; * V62WP: Warenpost (will be replaced by DHL Kleinpaket from 1.1.2025); * V62KP: DHL Kleinpaket; * V66WPI: Warenpost International | [optional]
 **billing_number** | **string** | 14 digit long number that identifies the contract the shipment is booked on. Please note that in rare cases the last to characters can be letters. Digit 11 and digit 12 must correspondent to the number of the product, e.g. 333333333301tt can only be used for the product V01PAK (DHL Paket). | [optional]
 **ref_no** | **string** | A reference number that the user can assign for better association purposes. It appears on shipment labels. To use the reference number for tracking purposes, it should be at least 8 characters long and unique. | [optional]
 **cost_center** | **string** | Textfield that appears on the shipment label. It cannot be used to search for the shipment. | [optional]
