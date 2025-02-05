@@ -714,6 +714,9 @@ class ContactAddress implements ModelInterface, ArrayAccess, \JsonSerializable
         if ((mb_strlen($address_house) < 1)) {
             throw new \InvalidArgumentException('invalid length for $address_house when calling ContactAddress., must be bigger than or equal to 1.');
         }
+        if ($address_house == '0') {
+            throw new \InvalidArgumentException('invalid value for $address_house when calling Consignee., must be bigger than or equal to 1.');
+        }
 
         $this->container['address_house'] = $address_house;
 
