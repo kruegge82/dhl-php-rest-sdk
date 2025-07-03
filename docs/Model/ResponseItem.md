@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **shipment_no** | **string** |  | [optional]
 **routing_code** | **string** | Routing code of the consignee address | [optional]
+**return_routing_code** | **string** | Routing code of the return address | [optional]
 **return_shipment_no** | **string** |  | [optional]
 **sstatus** | [**\kruegge82\DHL\Model\RequestStatus**](RequestStatus.md) |  |
 **shipment_ref_no** | **string** |  | [optional]

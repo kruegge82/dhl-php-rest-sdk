@@ -1,6 +1,6 @@
 <?php
 /**
- * LockerTest
+ * ProductTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace kruegge82\DHL\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * LockerTest Class Doc Comment
+ * ProductTest Class Doc Comment
  *
  * @category    Class
- * @description Only usable for German Packstation, international lockers cannot be addressed directly. If your customer wishes for international delivery to a droppoint, please use DHL Parcel International (V53WPAK) with the delivery type \&quot;Closest Droppoint\&quot;.
+ * @description Determines the DHL Paket product to be used.  * V01PAK: DHL PAKET; * V53WPAK: DHL PAKET International; * V54EPAK: DHL Europaket; * V62WP: Warenpost (will be replaced by DHL Kleinpaket from 1.1.2025); * V62KP: DHL Kleinpaket; * V66WPI: Warenpost International
  * @package     kruegge82\DHL
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class LockerTest extends TestCase
+class ProductTest extends TestCase
 {
 
     /**
@@ -71,63 +71,9 @@ class LockerTest extends TestCase
     }
 
     /**
-     * Test "Locker"
+     * Test "Product"
      */
-    public function testLocker()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "locker_id"
-     */
-    public function testPropertyLockerId()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "post_number"
-     */
-    public function testPropertyPostNumber()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "city"
-     */
-    public function testPropertyCity()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "country"
-     */
-    public function testPropertyCountry()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "postal_code"
-     */
-    public function testPropertyPostalCode()
+    public function testProduct()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **premium** | **bool** | Choice of premium vs economy parcel. Availability is country dependent and may be manipulated by DHL if choice is not available. Please review the label. | [optional]
 **closest_drop_point** | **bool** | Closest Droppoint Delivery to the droppoint closest to the address of the recipient of the shipment. For this kind of delivery either the phone number and/or the e-mail address of the receiver is mandatory. For shipments using DHL Paket International it is recommended that you choose one of the three delivery types: Economy, Premium, CDP. Otherwise, the current default for the receiver country will be picked. | [optional]
 **parcel_outlet_routing** | **string** | Undeliverable domestic shipment can be forwarded and held at retail. Notification to email (fallback: consignee email) will be used. | [optional]
+**go_green_plus** | **bool** | GoGreen Plus enables sustainable shipping by investing in measures to reduce greenhouse gas emissions at DHL. | [optional]
 **dhl_retoure** | [**\kruegge82\DHL\Model\VASDhlRetoure**](VASDhlRetoure.md) |  | [optional]
 **postal_delivery_duty_paid** | **bool** | All import duties are paid by the shipper. | [optional]
 

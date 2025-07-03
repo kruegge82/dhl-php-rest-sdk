@@ -1,6 +1,6 @@
 <?php
 /**
- * Weight
+ * BillingNoToSheetNo
  *
  * PHP version 8.1
  *
@@ -32,16 +32,16 @@ use \ArrayAccess;
 use \kruegge82\DHL\ObjectSerializer;
 
 /**
- * Weight Class Doc Comment
+ * BillingNoToSheetNo Class Doc Comment
  *
  * @category Class
- * @description Weight of item or shipment. Both uom and value are required.
+ * @description Mapping between billing number and sheet number
  * @package  kruegge82\DHL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class Weight implements ModelInterface, ArrayAccess, \JsonSerializable
+class BillingNoToSheetNo implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class Weight implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Weight';
+    protected static $openAPIModelName = 'BillingNoToSheetNo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,8 @@ class Weight implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'uom' => 'string',
-        'value' => 'float'
+        'billing_number' => 'string',
+        'sheet_no' => 'string'
     ];
 
     /**
@@ -70,8 +70,8 @@ class Weight implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'uom' => null,
-        'value' => null
+        'billing_number' => null,
+        'sheet_no' => null
     ];
 
     /**
@@ -80,8 +80,8 @@ class Weight implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'uom' => false,
-        'value' => false
+        'billing_number' => false,
+        'sheet_no' => false
     ];
 
     /**
@@ -170,8 +170,8 @@ class Weight implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'uom' => 'uom',
-        'value' => 'value'
+        'billing_number' => 'billingNumber',
+        'sheet_no' => 'sheetNo'
     ];
 
     /**
@@ -180,8 +180,8 @@ class Weight implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'uom' => 'setUom',
-        'value' => 'setValue'
+        'billing_number' => 'setBillingNumber',
+        'sheet_no' => 'setSheetNo'
     ];
 
     /**
@@ -190,8 +190,8 @@ class Weight implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'uom' => 'getUom',
-        'value' => 'getValue'
+        'billing_number' => 'getBillingNumber',
+        'sheet_no' => 'getSheetNo'
     ];
 
     /**
@@ -235,21 +235,6 @@ class Weight implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
-    public const UOM_G = 'g';
-    public const UOM_KG = 'kg';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getUomAllowableValues()
-    {
-        return [
-            self::UOM_G,
-            self::UOM_KG,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -266,8 +251,8 @@ class Weight implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('uom', $data ?? [], null);
-        $this->setIfExists('value', $data ?? [], null);
+        $this->setIfExists('billing_number', $data ?? [], null);
+        $this->setIfExists('sheet_no', $data ?? [], null);
     }
 
     /**
@@ -297,29 +282,6 @@ class Weight implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['uom'] === null) {
-            $invalidProperties[] = "'uom' can't be null";
-        }
-        $allowedValues = $this->getUomAllowableValues();
-        if (!is_null($this->container['uom']) && !in_array($this->container['uom'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'uom', must be one of '%s'",
-                $this->container['uom'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
-        if (($this->container['value'] > 31500)) {
-            $invalidProperties[] = "invalid value for 'value', must be smaller than or equal to 31500.";
-        }
-
-        if (($this->container['value'] < 0)) {
-            $invalidProperties[] = "invalid value for 'value', must be bigger than or equal to 0.";
-        }
-
         return $invalidProperties;
     }
 
@@ -336,73 +298,55 @@ class Weight implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets uom
+     * Gets billing_number
      *
-     * @return string
+     * @return string|null
      */
-    public function getUom()
+    public function getBillingNumber()
     {
-        return $this->container['uom'];
+        return $this->container['billing_number'];
     }
 
     /**
-     * Sets uom
+     * Sets billing_number
      *
-     * @param string $uom metric unit for weight
+     * @param string|null $billing_number billing_number
      *
      * @return self
      */
-    public function setUom($uom)
+    public function setBillingNumber($billing_number)
     {
-        if (is_null($uom)) {
-            throw new \InvalidArgumentException('non-nullable uom cannot be null');
+        if (is_null($billing_number)) {
+            throw new \InvalidArgumentException('non-nullable billing_number cannot be null');
         }
-        $allowedValues = $this->getUomAllowableValues();
-        if (!in_array($uom, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'uom', must be one of '%s'",
-                    $uom,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['uom'] = $uom;
+        $this->container['billing_number'] = $billing_number;
 
         return $this;
     }
 
     /**
-     * Gets value
+     * Gets sheet_no
      *
-     * @return float
+     * @return string|null
      */
-    public function getValue()
+    public function getSheetNo()
     {
-        return $this->container['value'];
+        return $this->container['sheet_no'];
     }
 
     /**
-     * Sets value
+     * Sets sheet_no
      *
-     * @param float $value value
+     * @param string|null $sheet_no sheet_no
      *
      * @return self
      */
-    public function setValue($value)
+    public function setSheetNo($sheet_no)
     {
-        if (is_null($value)) {
-            throw new \InvalidArgumentException('non-nullable value cannot be null');
+        if (is_null($sheet_no)) {
+            throw new \InvalidArgumentException('non-nullable sheet_no cannot be null');
         }
-
-        if (($value > 31500)) {
-            throw new \InvalidArgumentException('invalid value for $value when calling Weight., must be smaller than or equal to 31500.');
-        }
-        if (($value < 0)) {
-            throw new \InvalidArgumentException('invalid value for $value when calling Weight., must be bigger than or equal to 0.');
-        }
-
-        $this->container['value'] = $value;
+        $this->container['sheet_no'] = $sheet_no;
 
         return $this;
     }

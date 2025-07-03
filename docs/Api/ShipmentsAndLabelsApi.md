@@ -99,7 +99,7 @@ try {
 ## `getLabel()`
 
 ```php
-getLabel($token): \kruegge82\DHL\Model\LabelDataResponse
+getLabel($token): \SplFileObject
 ```
 
 Download PDF document
@@ -151,16 +151,16 @@ try {
 
 ### Return type
 
-[**\kruegge82\DHL\Model\LabelDataResponse**](../Model/LabelDataResponse.md)
+**\SplFileObject**
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2), [ApiKey](../../README.md#ApiKey), [BasicAuth](../../README.md#BasicAuth)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/pdf`, `application/json`, `application/problem+json`
+- **Accept**: `application/pdf`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

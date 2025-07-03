@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **status** | [**\kruegge82\DHL\Model\RequestStatus**](RequestStatus.md) |  | [optional]
 **manifest_date** | **string** |  | [optional]
-**manifest** | [**\kruegge82\DHL\Model\GetManifestData**](GetManifestData.md) |  | [optional]
+**manifest** | [**\kruegge82\DHL\Model\Document[]**](Document.md) |  | [optional]
+**sheet_no** | [**\kruegge82\DHL\Model\BillingNoToSheetNo[]**](BillingNoToSheetNo.md) |  | [optional]
+**items** | [**\kruegge82\DHL\Model\ShipmentNoToSheetNo[]**](ShipmentNoToSheetNo.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -1,6 +1,6 @@
 <?php
 /**
- * LockerTest
+ * BillingNoToSheetNoTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace kruegge82\DHL\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * LockerTest Class Doc Comment
+ * BillingNoToSheetNoTest Class Doc Comment
  *
  * @category    Class
- * @description Only usable for German Packstation, international lockers cannot be addressed directly. If your customer wishes for international delivery to a droppoint, please use DHL Parcel International (V53WPAK) with the delivery type \&quot;Closest Droppoint\&quot;.
+ * @description Mapping between billing number and sheet number
  * @package     kruegge82\DHL
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class LockerTest extends TestCase
+class BillingNoToSheetNoTest extends TestCase
 {
 
     /**
@@ -71,63 +71,27 @@ class LockerTest extends TestCase
     }
 
     /**
-     * Test "Locker"
+     * Test "BillingNoToSheetNo"
      */
-    public function testLocker()
+    public function testBillingNoToSheetNo()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "billing_number"
      */
-    public function testPropertyName()
+    public function testPropertyBillingNumber()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "locker_id"
+     * Test attribute "sheet_no"
      */
-    public function testPropertyLockerId()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "post_number"
-     */
-    public function testPropertyPostNumber()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "city"
-     */
-    public function testPropertyCity()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "country"
-     */
-    public function testPropertyCountry()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "postal_code"
-     */
-    public function testPropertyPostalCode()
+    public function testPropertySheetNo()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
