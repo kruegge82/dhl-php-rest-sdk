@@ -1,5 +1,7 @@
 # kruegge82\DHL\ManifestsApi
 
+Manifest shipments and retrieve daily manifest lists
+
 All URIs are relative to https://api-eu.dhl.com/parcel/de/shipping/v2, except if the operation defines another base path.
 
 | Method | HTTP request | Description |

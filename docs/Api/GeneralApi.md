@@ -1,5 +1,7 @@
 # kruegge82\DHL\GeneralApi
 
+Get API version info
+
 All URIs are relative to https://api-eu.dhl.com/parcel/de/shipping/v2, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
