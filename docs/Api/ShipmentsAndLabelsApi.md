@@ -113,25 +113,11 @@ Public download URL for shipment labels and documents. The URL is provided in th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-// Configure API key authorization: ApiKey
-$config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKey('dhl-api-key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = kruegge82\DHL\Configuration::getDefaultConfiguration()->setApiKeyPrefix('dhl-api-key', 'Bearer');
-
-// Configure HTTP basic authorization: BasicAuth
-$config = kruegge82\DHL\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
-
 
 $apiInstance = new kruegge82\DHL\Api\ShipmentsAndLabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $token = 'token_example'; // string | Identifies PDF document and requested print settings for download.
 

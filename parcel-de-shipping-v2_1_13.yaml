@@ -916,6 +916,7 @@ components:
         addressHouse:
           maxLength: 10
           minLength: 1
+          pattern: '^(?!0$).*$'
           type: string
           description: Line 1 of the street address. This is just the house number. Can be added to street name instead.
           example: 1a
@@ -1345,6 +1346,7 @@ components:
         addressHouse:
           maxLength: 10
           minLength: 1
+          pattern: '^(?!0$).*$'
           type: string
           description: Line 1 of the street address. This is just the house number. Can be added to street name instead.
           example: 1a
